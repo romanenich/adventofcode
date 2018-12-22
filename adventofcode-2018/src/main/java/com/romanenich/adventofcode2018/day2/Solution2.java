@@ -13,8 +13,6 @@ public class Solution2 {
 
     private final static String FILE_PATH = "com/romanenich/adventofcode2018/day2/input2.txt";
 
-    private final static String test = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-
     public static void main(String[] args) {
         Solution2 solution2 = new Solution2();
         System.out.println(countCheckSum(solution2.readData()));
