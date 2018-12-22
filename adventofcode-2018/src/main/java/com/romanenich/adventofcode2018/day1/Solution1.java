@@ -11,12 +11,12 @@ import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class Solution {
+public class Solution1 {
 
     private final static String FILE_PATH = "com/romanenich/adventofcode2018/day1/input.txt";
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        Solution1 solution = new Solution1();
         System.out.println("Resulting frequency is " + solution.getResult().sum);
         System.out.println("The first frequency reached twice is " + findFirstFrequencyReachedTwice(solution.getResult().numbers));
     }
