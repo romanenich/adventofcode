@@ -56,11 +56,11 @@ public class StringComparator implements Comparator<String> {
         str1 = o1;
         str2 = o2;
 
-        findAndSetRoot();
+        setRoot();
         return 0;
     }
 
-    private void findAndSetRoot() {
+    private void setRoot() {
         root = str1.substring(0, pos).concat(str1.substring(pos + 1));
     }
 }
