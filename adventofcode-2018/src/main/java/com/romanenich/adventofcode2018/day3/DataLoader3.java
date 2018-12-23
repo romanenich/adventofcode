@@ -2,9 +2,6 @@ package com.romanenich.adventofcode2018.day3;
 
 import com.romanenich.AbstractDataLoader;
 
-import static sun.swing.MenuItemLayoutHelper.max;
-
-
 class DataLoader3 extends AbstractDataLoader<Data3> {
 
     private static final String DELIMITERS = "[#@,:x]";
@@ -30,8 +27,8 @@ class DataLoader3 extends AbstractDataLoader<Data3> {
         // should be the array like that [, 18 ,  383, 79,  13, 6]
         String[] values = line.split(DELIMITERS);
 
-        maxX = max(maxX, Integer.valueOf(values[2].trim()) + Integer.valueOf(values[4].trim()));
-        maxY = max(maxY, Integer.valueOf(values[3].trim()) + Integer.valueOf(values[5].trim()));
+        maxX = Math.max(maxX, Integer.valueOf(values[2].trim()) + Integer.valueOf(values[4].trim()));
+        maxY = Math.max(maxY, Integer.valueOf(values[3].trim()) + Integer.valueOf(values[5].trim()));
 
         return Data3.builder()
                 .id(Integer.valueOf(values[1].trim()))

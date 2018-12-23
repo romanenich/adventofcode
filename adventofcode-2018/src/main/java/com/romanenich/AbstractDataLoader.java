@@ -11,7 +11,7 @@ import java.util.List;
  */
 public abstract class AbstractDataLoader<T> implements DataLoader {
 
-    protected String filePath;
+    private String filePath;
 
     public AbstractDataLoader(String filePath) {
         this.filePath = filePath;
