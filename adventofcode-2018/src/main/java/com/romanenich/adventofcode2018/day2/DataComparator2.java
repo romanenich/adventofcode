@@ -2,7 +2,7 @@ package com.romanenich.adventofcode2018.day2;
 
 import java.util.Comparator;
 
-public class StringComparator implements Comparator<String> {
+public class DataComparator2 implements Comparator<Data2> {
 
     private String str1;
     private String str2;
@@ -26,7 +26,9 @@ public class StringComparator implements Comparator<String> {
     }
 
     @Override
-    public int compare(String o1, String o2) {
+    public int compare(Data2 d1, Data2 d2) {
+        String o1 = d1.getValue();
+        String o2 = d2.getValue();
         if (o1.length() != o2.length()) {
             return o1.compareTo(o2);
         }
