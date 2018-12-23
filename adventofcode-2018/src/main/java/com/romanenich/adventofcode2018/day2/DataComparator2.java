@@ -2,26 +2,26 @@ package com.romanenich.adventofcode2018.day2;
 
 import java.util.Comparator;
 
-public class DataComparator2 implements Comparator<Data2> {
+class DataComparator2 implements Comparator<Data2> {
 
     private String str1;
     private String str2;
     private String root;
     private int pos;
 
-    public String getStr1() {
+    String getStr1() {
         return str1;
     }
 
-    public String getStr2() {
+    String getStr2() {
         return str2;
     }
 
-    public String getRoot() {
+    String getRoot() {
         return root;
     }
 
-    public int getPos() {
+    int getPos() {
         return pos;
     }
 

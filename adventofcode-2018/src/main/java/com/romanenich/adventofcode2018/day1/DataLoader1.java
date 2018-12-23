@@ -5,9 +5,9 @@ import com.romanenich.AbstractDataLoader;
 /**
  * Created by Roman on 23.12.2018.
  */
-public class DataLoader1 extends AbstractDataLoader<Data1> {
+class DataLoader1 extends AbstractDataLoader<Data1> {
 
-    public DataLoader1(String filePath) {
+    DataLoader1(String filePath) {
         super(filePath);
     }
 
