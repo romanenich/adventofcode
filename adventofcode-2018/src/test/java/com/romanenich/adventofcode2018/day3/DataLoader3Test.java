@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class DataLoader3Test {
 
-    private final static String FILE_PATH = "com.romanenich.adventofcode2018.day3/input3Test.txt";
+    private final static String FILE_PATH = "com.romanenich.adventofcode2018/day3/input3Test.txt";
 
     private Data3 claim1;
     private Data3 claim2;
