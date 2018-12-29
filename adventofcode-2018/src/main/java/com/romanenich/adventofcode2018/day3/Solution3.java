@@ -7,7 +7,7 @@ import java.util.List;
  */
 public class Solution3 {
 
-    private final static String FILE_PATH = "com/romanenich/adventofcode2018/day3/input3.txt";
+    private final static String FILE_PATH = "com.romanenich/adventofcode2018/day3/input3.txt";
 
     public static void main(String[] args) {
         DataLoader3 dataLoader3 = new DataLoader3(FILE_PATH);
