@@ -13,30 +13,30 @@ public class PolymerInfo implements Info {
     }
 
     @Override
-    public int getRemainUnits() {
-        return simplify(value).length();
+    public String getRemainedPolymer() {
+        return simplify(value);
     }
 
     @Override
-    public int getRemainUnitsAdjustedInput() {
+    public String getRemainAdjustedPolymer(String input) {
         int minLength = Integer.MAX_VALUE;
+        String curString  = StringUtils.EMPTY;
         for (int i = 0; i < 26; i++) {
-            String adjInput = getAdjustedString(i);
+            String adjInput = getAdjustedString(input, i);
 
-            int length = simplify(adjInput).length();
-            if (length < minLength) {
-                minLength = length;
+            String simplify = simplify(adjInput);
+            if (simplify.length() < minLength) {
+                minLength = simplify.length();
+                curString = simplify;
             }
         }
-
-        return minLength;
+        return curString;
     }
 
-    String getAdjustedString(int i) {
-        Character character = (char) ('a' + i);
-        char newChar = Character.toUpperCase(character);
-        String replacedInput = value.replace(character, newChar);
-        return replacedInput.replace(new StringBuilder().append(newChar),StringUtils.EMPTY);
+    String getAdjustedString(String input, int i) {
+        char character = (char) ('a' + i);
+        char bigCharacter = (char) ('a' + i - 32);
+        return input.replaceAll("" + character + "|" + bigCharacter, "");
     }
 
     private String simplify(String polymer) {

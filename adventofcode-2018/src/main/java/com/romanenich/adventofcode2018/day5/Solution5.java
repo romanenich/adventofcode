@@ -11,8 +11,9 @@ public class Solution5 {
         List<Data5> data5s = dataLoader5.loadData();
 
         PolymerInfo polymerInfo = new PolymerInfo(data5s.get(0).getValue());
-        System.out.println("1. Remained units = " + polymerInfo.getRemainUnits());
-        System.out.println("2. Min length     = " + polymerInfo.getRemainUnitsAdjustedInput());
+        String remainedPolymer = polymerInfo.getRemainedPolymer();
+        System.out.println("1. Remained units = " + remainedPolymer.length());
+        System.out.println("2. Min length     = " + polymerInfo.getRemainAdjustedPolymer(remainedPolymer).length());
 
     }
 }

@@ -19,16 +19,16 @@ class PolymerInfoTest {
 
     @Test
     void getRemainUnits() {
-        assertEquals(EXPECTED_RESULT.length(), polymerInfo.getRemainUnits());
+        assertEquals(EXPECTED_RESULT.length(), polymerInfo.getRemainedPolymer().length());
     }
 
     @Test
     void getAdjustedString() {
-        assertEquals("VvfpPFrRyRrYNpYyPD", polymerInfo.getAdjustedString(1));
+        assertEquals("VvfpPFrRyRrYNpYyPD", polymerInfo.getAdjustedString(INPUT_STRING,1));
     }
 
     @Test
     void getRemainUnitsAdjustedInput() {
-        assertEquals(1, polymerInfo.getRemainUnitsAdjustedInput());
+        assertEquals(1, polymerInfo.getRemainAdjustedPolymer(INPUT_STRING).length());
     }
 }
