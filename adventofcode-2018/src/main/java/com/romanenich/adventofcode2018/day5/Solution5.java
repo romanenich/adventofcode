@@ -10,6 +10,9 @@ public class Solution5 {
         DataLoader5 dataLoader5 = new DataLoader5(FILE_PATH);
         List<Data5> data5s = dataLoader5.loadData();
 
-        System.out.println(data5s);
+        PolymerInfo polymerInfo = new PolymerInfo(data5s.get(0).getValue());
+        System.out.println("1. Remained units = " + polymerInfo.getRemainUnits());
+        System.out.println("2. Min length     = " + polymerInfo.getRemainUnitsAdjustedInput());
+
     }
 }
