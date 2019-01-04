@@ -23,7 +23,7 @@ class PointsInfoTest {
                 new Point(5,5),
                 new Point(8,9)
         );
-        pointsInfo = new PointsInfo(points);
+        pointsInfo = new PointsInfo();
     }
 
     @Test

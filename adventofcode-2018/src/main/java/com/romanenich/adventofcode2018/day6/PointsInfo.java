@@ -4,12 +4,6 @@ import java.util.List;
 
 public class PointsInfo implements Info {
 
-    private List<Point> points;
-
-    public PointsInfo(List<Point> points) {
-        this.points = points;
-    }
-
     @Override
     public Square getSquare(List<Point> points) {
         int leftX = Integer.MAX_VALUE;
