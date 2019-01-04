@@ -19,9 +19,9 @@ class DataLoader6Test {
 
     @Test
     void convert() {
-        List<Data6> data6s = dataLoader6.loadData();
-        assertEquals(6, data6s.size());
-        assertEquals(new Data6(1,1), data6s.get(0));
-        assertEquals(new Data6(8,9), data6s.get(5));
+        List<Point> points = dataLoader6.loadData();
+        assertEquals(6, points.size());
+        assertEquals(new Point(1,1), points.get(0));
+        assertEquals(new Point(8,9), points.get(5));
     }
 }

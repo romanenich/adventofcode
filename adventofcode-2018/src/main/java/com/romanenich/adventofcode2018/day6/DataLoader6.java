@@ -5,17 +5,17 @@ import com.romanenich.AbstractDataLoader;
 /**
  * Created by Roman on 04.01.2019.
  */
-public class DataLoader6 extends AbstractDataLoader<Data6> {
+public class DataLoader6 extends AbstractDataLoader<Point> {
 
     public DataLoader6(String filePath) {
         super(filePath);
     }
 
     @Override
-    protected Data6 convert(String line) {
+    protected Point convert(String line) {
 
         String[] split = line.split(",");
 
-        return new Data6(Integer.valueOf(split[0].trim()), Integer.valueOf(split[1].trim()));
+        return new Point(Integer.valueOf(split[0].trim()), Integer.valueOf(split[1].trim()));
     }
 }
