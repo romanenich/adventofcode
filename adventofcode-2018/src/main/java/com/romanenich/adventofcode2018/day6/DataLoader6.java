@@ -13,6 +13,9 @@ public class DataLoader6 extends AbstractDataLoader<Data6> {
 
     @Override
     protected Data6 convert(String line) {
-        return null;
+
+        String[] split = line.split(",");
+
+        return new Data6(Integer.valueOf(split[0].trim()), Integer.valueOf(split[1].trim()));
     }
 }
