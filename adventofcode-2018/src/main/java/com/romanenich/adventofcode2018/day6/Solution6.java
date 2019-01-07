@@ -10,7 +10,10 @@ public class Solution6 {
         DataLoader6 dataLoader6 = new DataLoader6(FILE_PATH);
         List<Point> points = dataLoader6.loadData();
 
-        PointsInfo pointsInfo = new PointsInfo();
-        System.out.println(pointsInfo.getSquare(points));
+        PointsInfo pointsInfo = new PointsInfo(points);
+        Square square = pointsInfo.getSquare();
+        Point largestPoint = pointsInfo.getLargestPoint(square);
+        System.out.println("1. The size of the largest area is " + largestPoint.area());
+        System.out.println("2. The size of the region containing all locations which have a total distance to all given coordinates of less than 10000 " + pointsInfo.getSafeRegionSize(10000, square));
     }
 }

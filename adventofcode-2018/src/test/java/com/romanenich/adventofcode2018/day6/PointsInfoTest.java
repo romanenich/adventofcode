@@ -10,6 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class PointsInfoTest {
 
+    private Square expectedSquare;
     private List<Point> points;
     private PointsInfo pointsInfo;
 
@@ -23,12 +24,28 @@ class PointsInfoTest {
                 new Point(5,5),
                 new Point(8,9)
         );
-        pointsInfo = new PointsInfo();
+        expectedSquare = new Square(1, 8, 1,9 );
+        pointsInfo = new PointsInfo(points);
     }
 
     @Test
     void getSquare() {
-        Square square = pointsInfo.getSquare(points);
-        assertEquals(new Square(1, 8, 1,9 ), square);
+        Square square = pointsInfo.getSquare();
+        assertEquals(expectedSquare, square);
+    }
+
+    @Test
+    void getLargestPoint() {
+        Square square = pointsInfo.getSquare();
+        Point largestPoint = pointsInfo.getLargestPoint(expectedSquare);
+        System.out.println(largestPoint.area());
+        assertEquals(5, largestPoint.getX());
+        assertEquals(5, largestPoint.getY());
+    }
+
+    @Test
+    void testGetSafeRegionSize() {
+        assertEquals(16, pointsInfo.getSafeRegionSize(32, expectedSquare));
+
     }
 }
