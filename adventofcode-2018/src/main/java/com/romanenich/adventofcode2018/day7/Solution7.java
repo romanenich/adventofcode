@@ -14,5 +14,9 @@ public class Solution7 {
 
         List<Node> steps = treeInfo.getSteps(treeInfo.getNodes());
         System.out.println("1. step order is " + steps.stream().map(node -> node.getName()).collect(Collectors.joining("")));
+
+        System.out.println("2. steps should be executed during " + new WorkerManagerImpl(6, 60, steps).getStepsDuration() + " s");
+
+
     }
 }
